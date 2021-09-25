@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin-right: 8px;
+}
+
+.success {
+    color: #00a002;
+    padding: 4px;
+    border: 1px solid #00a002;
+    max-width: 250px;
+    text-align: center;
+}

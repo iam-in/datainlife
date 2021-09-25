@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 class GroupUser extends Pivot
 {
     public $timestamps = false;
+    public $incrementing = false;
 }
