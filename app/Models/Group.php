@@ -22,6 +22,6 @@ class Group extends Model
      */
     public function users()
     {
-        return $this->belongsToMany(User::class, 'group_user', 'group_id', 'user_id')->withPivot('expired_at');
+        return $this->belongsToMany(User::class)->withPivot('expired_at');
     }
 }

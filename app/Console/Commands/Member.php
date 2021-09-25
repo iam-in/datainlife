@@ -59,8 +59,7 @@ class Member extends Command
         $access_time = date("Y.m.d H:i:s", strtotime("+" . $group->expire_hourse . "hours", strtotime(now())));
         $group->users()->updateExistingPivot($user, array('expired_at' => $access_time));
 
-        $this->info('Success!');
-
+        $allert == true ? $this->info('Success!') : $this->error('Cancel!');
         return 0;
     }
 }
