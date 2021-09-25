@@ -22,7 +22,8 @@ class GroupFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => 'Группа' . $this->faker->unique()->numberBetween(1, 100),
+            'expire_hourse' => rand(1, 24),
         ];
     }
 }
