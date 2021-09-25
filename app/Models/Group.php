@@ -13,9 +13,14 @@ class Group extends Model
         'name',
     ];
 
-    // Отношение многие ко многим пользователей к группам
+
+    /**
+     * Отношение многие ко многим пользователей к группам
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function users()
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsToMany(User::class, 'group_user')->withTimestamps();
     }
 }

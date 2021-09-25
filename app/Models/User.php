@@ -42,9 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // Отношение многие ко многим групп к пользователям
+    /**
+     * Отношение многие ко многим групп к пользователям
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function groups()
     {
-        return $this->belongsToMany(Group::class)->withTimestamps();
+        return $this->belongsToMany(Group::class, 'group_user')->withTimestamps();
     }
 }
